@@ -101,3 +101,26 @@ select:-webkit-autofill:focus {
 	only screen and (min-resolution: 192dpi),
 	only screen and (min-resolution: 2dppx) {
 }
+
+.faq-wrapper {
+}
+.faq {
+}
+.faq__header {
+}
+.faq__title {
+}
+.faq__body {
+}
+.faq__list {
+}
+.faq__item {
+}
+.faq__question-wrapper {
+}
+.faq__question {
+}
+.faq__toggler {
+}
+.faq__answer {
+}
