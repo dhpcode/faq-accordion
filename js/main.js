@@ -28,38 +28,63 @@
 //   }
 // });
 
-
-
-
-
-
-
-
-
+// =========================================
 // beginner version
 // beginner version
 // beginner version
 
+
+// const questions = document.querySelectorAll('.faq__question-wrapper');
+
+// questions.forEach(question => {
+//   question.addEventListener('click', () => {
+//     const item = question.parentElement;
+//     const answer = item.querySelector('.faq__answer');
+//     const toglleImg = item.querySelector('.faq__toggler-img');
+
+//     //javobni ochish va yopish
+//     answer.classList.toggle('faq__answer--open')
+
+
+//     //ikonkani o'zgartirish
+
+//     if(answer.classList.contains('faq__answer--open')) {
+//       toglleImg.src = 'images/close-icon.svg';
+//     } else {
+//       toglleImg.src = 'images/open-icon.svg';
+//     }
+
+//   })
+// })
+
+
+
+// ====================================
+
+// agar faqat bitta answer ochiq turishini hohlasak
 
 const questions = document.querySelectorAll('.faq__question-wrapper');
 
 questions.forEach(question => {
   question.addEventListener('click', () => {
     const item = question.parentElement;
+    const togglerImg = item.querySelector('.faq__toggler-img');
     const answer = item.querySelector('.faq__answer');
-    const toglleImg = item.querySelector('.faq__toggler-img');
-
-    //javobni ochish va yopish
-    answer.classList.toggle('faq__answer--open')
 
 
-    //ikonkani o'zgartirish
+    const isOpen = answer.classList.contains('faq__answer--open');
 
-    if(answer.classList.contains('faq__answer--open')) {
-      toglleImg.src = 'images/close-icon.svg';
-    } else {
-      toglleImg.src = 'images/open-icon.svg';
+    document.querySelectorAll('.faq__answer').forEach(answer => {
+      answer.classList.remove('faq__answer--open');
+    })
+
+    document.querySelectorAll('.faq__toggler-img').forEach(img => {
+      img.src = 'images/open-icon.svg';
+    })
+
+    if (!isOpen) {
+      answer.classList.add('faq__answer--open');
+      togglerImg.src = "images/close-icon.svg"
     }
-  
   })
 })
