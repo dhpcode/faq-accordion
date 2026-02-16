@@ -171,6 +171,10 @@ body {
 	align-items: center;
 	cursor: pointer;
 }
+
+.faq__question-wrapper:hover h2 {
+	color: var(--purple);
+}
 .faq__question {
 	margin: 0;
 	font-size: 1rem;
